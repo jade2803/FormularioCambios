@@ -250,7 +250,7 @@
     </div>
 </main>
   
-  <script src="a.js"></script>
+    <script src="a.js" defer></script>
   <script>
     function generarPDF() {
         // Ocultar elementos que no se quieren imprimir
