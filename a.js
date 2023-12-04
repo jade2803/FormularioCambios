@@ -66,4 +66,14 @@ function agregarCosto() {
     `;
     tableBody.insertAdjacentHTML('beforeend', nuevaFila);
   }
+    function recalcularTotalCostos() {
+    var total = 0;
+    var importeInputs = document.querySelectorAll('.importe-input');
   
+    importeInputs.forEach(function (input) {
+      var importe = parseFloat(input.value) || 0;
+      total += importe;
+    });
+  
+    document.getElementById("codigoProyecto").value = total.toFixed(2);
+  }
