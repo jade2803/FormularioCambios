@@ -89,3 +89,27 @@
 </div>
 </div>
 </main>
+<button onclick="generarPDF()" class="mt-4 bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">
+  Generar PDF
+</button>
+
+<script src="a.js" defer></script>
+
+<script>
+  function generarPDF() {
+      // Usa html2pdf para generar el PDF
+      var element = document.body;
+      html2pdf(element, {
+          margin: 10,
+          filename: 'formulario.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      });
+  }
+</script>
+</body>
+
+</html>
+
+
