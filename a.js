@@ -1,4 +1,4 @@
-// a.js
+
 function agregarFila() {
     const tableBody = document.getElementById('activitiesTableBody');
     const nuevaFila = `
