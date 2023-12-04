@@ -149,21 +149,45 @@
                                     </table>
                                     <button type="button" class="mt-4 bg-gray-600 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded" onclick="agregarCosto()">
                                     Añadir Costo
-                                    </button>
-                                    <div class="sm:col-span-4 flex justify-end items-center mt-4">
-                                    <div class="mr-2">  </td>
-                                     <label class="block text-gray-800 text-sm font-bold mb-2" for="codigoProyecto">Total</label>
+                                    <button type="button" class="mt-4 bg-gray-600 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded" onclick="agregarFila()">
+                                Añadir Actividad
+                            </button>
+                            <br>
+                            <br>
+                            <div class="overflow-x-auto">
+                                <h1 class="mb-4 text-gray-700 tracking-tight font-extrabold">Costos</h1>
+                                <table class="min-w-full bg-gray-400 border border-gray-400">
+                                <thead>
+                                    <tr>
+                                    <th class="py-2 px-4 border-b">Descripción</th>
+                                    <th class="py-2 px-4 border-b">Tipo de Costo</th>
+                                    <th class="py-2 px-4 border-b">Importe</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="costsTableBody">
+                                </tbody>
+                                </table>
+                                <button type="button" class="mt-4 bg-gray-600 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded" onclick="agregarCosto()">
+                                Añadir Costo
+                                </button>
+                                <br>
+                                <br>
+                                <div class="flex justify-lefth">
+                                    <div>
+                                        <label class="block text-gray-800 text-sm font-bold mb-2" for="codigoProyecto">Total</label>
                                     </div>
+                                    
                                     <input
-                                        class="shadow appearance-none border rounded py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-400 dark:text-gray-800"
-                                        id="TOTAL"
+                                        class="shadow appearance-none border rounded py-1 px-2 text-gray-800 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-400 dark:text-gray-800"
+                                        id="codigoProyecto"
                                         name="codigoProyecto"
                                         type="text"
-                                        value="0.00" 
+                                        value="0.00" <!-- Inicializa el valor total a 0 -->
+                                        readonly
                                     />
-                                    </div>
-                                </div>  
-                            </div>
+                                </div>
+                            </div>  
+                        </div>
                             </section>
                             <th class="py-2 px-4 border-b">ID APROBACION</th>
                             <td class="py-2 px-4 border-b">
