@@ -6,6 +6,86 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="overflow-x-auto">
+        <h1 class="mb-4 text-gray-700 tracking-tight font-extrabold">Costos</h1>
+        <table class="min-w-full bg-gray-400 border border-gray-400">
+        <thead>
+            <tr>
+            <th class="py-2 px-4 border-b">Descripción</th>
+            <th class="py-2 px-4 border-b">Tipo de Costo</th>
+            <th class="py-2 px-4 border-b">Importe</th>
+            </tr>
+        </thead>
+        <tbody id="costsTableBody">
+        </tbody>
+        </table>
+        <button type="button" class="mt-4 bg-gray-600 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded" onclick="agregarCosto()">
+        Añadir Costo
+        </button>
+        <br>
+        <br>
+        <div class="flex justify-lefth">
+            <div>
+                <label class="block text-gray-800 text-sm font-bold mb-2" for="codigoProyecto">Total</label>
+            </div>
+            
+            <input
+                class="shadow appearance-none border rounded py-1 px-2 text-gray-800 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-400 dark:text-gray-800"
+                id="codigoProyecto"
+                name="codigoProyecto"
+                type="text"
+                value="0.00" <!-- Inicializa el valor total a 0 -->
+                readonly
+            />
+        </div>
+    </div>  
+
+</div>
+</section>
+<br>
+<br>
+<div class="flex mb-4 items-center">
+    <h1 class="mb-4 text-gray-700 tracking-tight font-extrabold">Aprobación de la Solicitud</h1>
     
-</body>
-</html>
+    <label class="block text-gray-700 text-sm mr-8" for="si"></label>
+    <input type="radio" id="si" name="aprobacion" class="form-radio h-5 w-5 ring-white">
+    <span class="ml-2 text-gray-700 mr-6">SI</span>
+    
+    <label class="block text-white text-sm mr-8" for="no"></label>
+    <input type="radio" id="no" name="aprobacion" class="form-radio h-5 w-5">
+    <span class="ml-2 text-gray-700">NO</span>
+  </div>
+  
+  
+  
+  <div class="sm:col-span-4 justify-center">
+    <label class="block text-gray-700 text-sm font-bold mr-8" for="fecha"> Fecha de Aprobación</label>
+    <input type="date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-400 dark:text-gray-800" id="fecha" name="fecha">
+  </div>
+  
+  <br />
+  <div class="overflow-x-auto">
+    <h1 class="mb-4 text-gray-700 tracking-tight font-extrabold">Aprobado por:</h1>
+    <table class="min-w-full bg-gray-400 border border-gray-400">
+      <thead>
+        <tr>
+          <th class="py-2 px-4 border-b text-gray-700">Cargo</th>
+          <th class="py-2 px-4 border-b text-gray-700">Nombre</th>
+          <th class="py-2 px-4 border-b text-gray-700">Firma</th>
+        </tr>
+      </thead>
+      <tbody id="signaturesTableBody">
+      </tbody>
+    </table>
+    <button type="button" class="mt-4 bg-gray-600 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded" onclick="agregarFirma()">
+      Añadir Firma
+    </button>
+  </div>
+  <br/>
+<button type="button" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+    >Enviar</button>
+</form>
+</section>
+</div>
+</div>
+</main>
